@@ -179,10 +179,10 @@ const { json } = require('stream/consumers');
 // 17 ● Write a Node.js script to copy the contents of "source.txt" to "destination.txt" using the fs
 // module.
 
-// fs.readFile('source.txt.txt',(err,data)=>{
+// fs.readFile('source.txt',(err,data)=>{
 //     if(err)throw err;
 
-//     fs.appendFile('destination.txt',data,(err)=>{
+//     fs.writeFile('destination.txt',data,(err)=>{
 //         if(err)throw err;
 //         console.log('context copied from one to another file...');
 //     })
