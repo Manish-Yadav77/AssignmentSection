@@ -1,0 +1,35 @@
+{
+    "scene": {
+      "location": "countryside",
+      "time_of_day": "sunset",
+      "weather": "clear",
+      "description": {
+        "sky": "orange and pink hues",
+        "birds": "fluttering, singing",
+        "scent": "fresh earth, wildflowers"
+      },
+      "building": {
+        "type": "cottage",
+        "material": "stone",
+        "condition": "worn by time",
+        "symbolism": "testament to generations past"
+      },
+      "interior": {
+        "furniture": [
+          {
+            "type": "wooden clock",
+            "sound": "ticking",
+            "purpose": "marking time"
+          },
+          {
+            "type": "hearth",
+            "sound": "crackling fire",
+            "purpose": "providing warmth"
+          }
+        ],
+        "atmosphere": "comforting, peaceful"
+      },
+      "mood": "calm, serene"
+    }
+  }
+  
