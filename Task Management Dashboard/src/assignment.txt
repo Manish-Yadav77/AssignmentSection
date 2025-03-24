@@ -1,0 +1,56 @@
+Assignment: Task Management Dashboard
+Problem Statement: Create a simple "Task Management Dashboard" using React and
+Tailwind CSS. The dashboard will display a list of tasks and allow users to add, delete, and
+mark tasks as complete. The UI should be responsive, so it looks good on both mobile and
+desktop views.
+Requirements:
+1. Task List: Display a list of tasks. Each task should display the following:
+○ Task title
+○ Task description (a short description)
+○ Task status (Complete / Incomplete)
+2. Add Task:
+○ Create a form with two inputs (Task Title and Description) and a submit button.
+○ When the user clicks the submit button, a new task should be added to the task
+list. The task should initially have a status of "Incomplete."
+○ If the form is empty (both fields), disable the submit button.
+3. Mark Task as Complete:
+○ The user should be able to mark a task as "Complete" or "Incomplete" by clicking
+on the task.
+○ When a task is marked as complete, it should change visually (e.g., crossed out
+or different color).
+4. Delete Task:
+○ Add a delete button to each task. When clicked, the task should be removed from
+the list.
+5. Responsive Design:
+○ Ensure that the layout is responsive and works well on both mobile and desktop
+screens.
+○ Tasks should be displayed in a grid layout on large screens (e.g., 3 columns) and
+stack vertically on smaller screens (e.g., single column on mobile).
+Technical Details:
+● Use React functional components and hooks (like useState and useEffect) to
+manage the state.
+● Use Tailwind CSS to style the app. The app should be styled in a simple yet attractive
+way.
+● Bonus if you add any transitions or animations (e.g., when a task is added or deleted).
+● Handle all edge cases, like submitting an empty form, deleting a task, and marking a
+task as complete.
+Example Structure:
+Components:
+1. App.js: The main component that holds the task list and manages state.
+2. Task.js: A component to display individual tasks.
+3. TaskForm.js: A form to add new tasks.
+Mock-up UI:
+● The task cards should be displayed inside a grid on larger screens.
+● Each task card should have the following buttons and features:
+○ Delete button.
+○ Mark as Complete/Incomplete toggle.
+Expected Functionality:
+1. A user should be able to:
+○ Add a new task with a title and description.
+○ Toggle the completion status of a task.
+○ Delete a task.
+2. The layout should be:
+○ Clean and modern, with responsive design.
+○ Use Tailwind's utility classes for layout, spacing, and colors.
+○ Use Tailwind's responsive features to ensure the dashboard adapts well to both
+small (mobile) and large (desktop) screens.
