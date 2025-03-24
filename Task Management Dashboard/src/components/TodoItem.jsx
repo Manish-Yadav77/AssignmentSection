@@ -26,13 +26,17 @@ function TodoItem({ todo }) {
       >
         {todo.todo}
       </p>
+
+      {
+        todo.desc && 
       <p
-        className={`border outline-none w-full bg-transparent rounded-lg ${
-          todo.completed ? "line-through" : ""
+      className={`border outline-none w-full bg-transparent rounded-lg ${
+        todo.completed ? "line-through" : ""
         }`}
-      >
+        >
         {todo.desc}
       </p>
+      }
       {/* Delete Todo Button */}
       <button
         className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"

@@ -28,7 +28,7 @@ function TodoForm() {
       />
       <input
         type="text"
-        placeholder="Write Todo Descripition [ Optional... ] "
+        placeholder="Todo Descripition [ Optional... ] "
         className="w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
         value={desc}
         onChange={(e)=>setDesc(e.target.value)}
