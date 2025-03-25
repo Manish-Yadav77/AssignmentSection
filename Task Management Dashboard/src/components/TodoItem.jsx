@@ -7,55 +7,54 @@ function TodoItem({ todo }) {
   const toggleCompleted = () => {
     toggleComplete(todo.id);
   };
+
   return (
     <div
-      className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black sm:flex-row flex-col ${
-        todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
+      className={`flex flex-col sm:flex-row items-center justify-between border border-gray-200 rounded-lg p-5 gap-3 shadow-lg transition-all duration-300 hover:shadow-xl ${
+        todo.completed ? "bg-green-100" : "bg-purple-100"
       }`}
     >
-      <div className="flex gap-1">
-
-      <input
-        type="checkbox"
-        className="cursor-pointer"
-        checked={todo.completed}
-        onChange={toggleCompleted}
+      {/* Left Section: Checkbox & Status */}
+      <div className="flex items-center gap-3">
+        <input
+          type="checkbox"
+          className="cursor-pointer w-5 h-5 accent-green-600"
+          checked={todo.completed}
+          onChange={toggleCompleted}
         />
-      {
-        todo.completed? <p className="sm:hidden font-bold pb-1">completed</p>:<p className="sm:hidden font-bold">not completed yet</p>
-      }
-      </div>
-      <p
-        className={`border outline-none w-full bg-transparent rounded-lg pl-2 sm:mb-0 mb-4 ${
-          todo.completed ? "line-through" : ""
-        }`}
-      >
-        {todo.todo}
-      </p>
-
-      {
-        todo.desc && 
-      <p
-      className={`border outline-none w-full bg-transparent rounded-lg pl-2 sm:mb-0 mb-4 ${
-        todo.completed ? "line-through" : ""
-        }`}
-        >
-        {todo.desc}
-      </p>
-      }
-      {/* Delete Todo Button */}
-      <div className="flex gap-1">
-
-      <button
-        className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-300 shrink-0"
-        onClick={() => deleteTodo(todo.id)}
-        >
-        ❌
-      </button>
-      <p className=" sm:hidden font-bold pt-0.5">
-        Delete
-      </p>
+        <div className="text-sm font-semibold text-black">
+          {todo.completed ? <p >✅ Completed</p>  : <p>⏳ Not Completed</p> }
         </div>
+      </div>
+
+      {/* Middle Section: Task Content */}
+      <div className="flex flex-col w-full">
+        <p
+          className={`text-lg font-medium px-3 py-1 rounded-md ${
+            todo.completed ? "line-through text-gray-500" : "text-gray-900"
+          }`}
+        >
+          {todo.todo}
+        </p>
+
+        {todo.desc && (
+          <p
+            className={`text-sm px-3 py-1 text-gray-700 italic ${
+              todo.completed ? "line-through text-gray-400" : "text-gray-800"
+            }`}
+          >
+            {todo.desc}
+          </p>
+        )}
+      </div>
+
+      {/* Right Section: Delete Button */}
+      <button
+        className="flex items-center gap-2 bg-white text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
+        onClick={() => deleteTodo(todo.id)}
+      >
+        ❌ <span className="hidden sm:inline">Delete</span>
+      </button>
     </div>
   );
 }
