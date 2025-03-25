@@ -18,7 +18,7 @@ function TodoForm() {
     }
 
   return (
-    <form onSubmit={add} className="flex gap-3">
+    <form onSubmit={add} className="flex gap-3 sm:flex-row flex-col">
       <input
         type="text"
         placeholder="Write Todo..."
