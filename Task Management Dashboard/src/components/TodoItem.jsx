@@ -28,7 +28,7 @@ function TodoItem({ todo }) {
       </div>
 
       {/* Middle Section: Task Content */}
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full items-center">
         <p
           className={`text-lg font-medium px-3 py-1 rounded-md ${
             todo.completed ? "line-through text-gray-500" : "text-gray-900"
